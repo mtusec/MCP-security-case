@@ -12,8 +12,7 @@ DB_PATH = os.path.join(BASE_DIR, "medical_records.db")
 
 mcp = FastMCP(
     name="demo-server",
-    # host="0.0.0.0",
-    host = "localhost",
+    host="0.0.0.0",
     port=6278,
 )
 
@@ -240,4 +239,4 @@ def calculate_average_risk(responses: list) -> float:
 
 if __name__ == "__main__":
     logging.info("Starting MCP server")
-    mcp.run(transport="streamable-http")
+    mcp.run(transport="sse")
