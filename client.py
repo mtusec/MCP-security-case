@@ -27,7 +27,7 @@ def query_llm(prompt: str) -> str:
 async def test_sql_injection(session):
     print("\n=== [1] SQL Injection ===")
     try:
-        result = await session.call_tool("get_medical_record_by_column", {
+        result = await session.call_tool("query_by_column", {
             "patient_id": "1 or 1=1 ",
             "order_by": "Age",
             "descending": True
@@ -99,7 +99,7 @@ async def test_prompt_injection(session):
         record, meta = await session.read_resource(f"resource://medical_record/{patient_id}")
         real_data = get_real_data(meta)
 
-        prompt_obj = await session.get_prompt("echo_prompt", {"message": json.dumps(real_data)})
+        prompt_obj = await session.get_prompt("get_prompt", {"message": json.dumps(real_data)})
         print("Injected Prompt Content:", prompt_obj.messages[0].content.text)
 
     except Exception as e:
@@ -156,7 +156,7 @@ async def demo_patient_risk_pipeline(session, patient_ids=None):
 
         record_json_str = get_real_data(meta)
 
-        prompt = await session.get_prompt("echo_prompt", arguments={"message": record_json_str})
+        prompt = await session.get_prompt("get_prompt", arguments={"message": record_json_str})
         formatted_prompt = prompt.messages[0].content.text
         print("\nHeart attack risk prompt →", formatted_prompt)
 

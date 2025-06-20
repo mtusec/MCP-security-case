@@ -12,7 +12,8 @@ DB_PATH = os.path.join(BASE_DIR, "medical_records.db")
 
 mcp = FastMCP(
     name="demo-server",
-    host="0.0.0.0",
+    # host="0.0.0.0",
+    host = "localhost",
     port=6278,
 )
 
@@ -40,7 +41,7 @@ def get_medical_record(patient_id: str) -> dict:
         return {"error": f"Database error: {str(e)}"}
 
 @mcp.tool()
-def get_medical_record_by_column(patient_id: str, order_by: str = "EncounterDate", descending: bool = False) -> dict:
+def query_by_column(patient_id: str, order_by: str = "EncounterDate", descending: bool = False) -> dict:
     """
     Retrieve medical records for a patient, ordered by a specific field.
 
@@ -217,7 +218,7 @@ def delete_medical_record(PatientID: str) -> str:
 
 
 @mcp.prompt()
-def echo_prompt(message: str) -> str:
+def get_prompt(message: str) -> str:
     prompt = f"Analyze the risk of heart attack for this patient based on the following data: {message}. Return only 'Risk: X%' where X is a number."
     return prompt
 
@@ -239,4 +240,4 @@ def calculate_average_risk(responses: list) -> float:
 
 if __name__ == "__main__":
     logging.info("Starting MCP server")
-    mcp.run(transport="sse")
+    mcp.run(transport="streamable-http")
