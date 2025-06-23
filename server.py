@@ -239,4 +239,4 @@ def calculate_average_risk(responses: list) -> float:
 
 if __name__ == "__main__":
     logging.info("Starting MCP server")
-    mcp.run(transport="sse")
+    mcp.run(transport="streamable-http")
