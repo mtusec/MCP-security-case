@@ -1,0 +1,11 @@
+PatientID,FirstName,LastName,Sex,DateOfBirth,Age,EncounterDate,EncounterType,DiagnosisCode,DiagnosisDescription,Medications,Allergies,BP_Systolic,BP_Diastolic,HeartRate,Notes
+P1000,Jennifer,Williams,M,1977-08-20,47,2025-04-06,Annual Checkup,J06.9,"Acute upper respiratory infection, unspecified","Metformin 500 mg, Amoxicillin 500 mg, Albuterol Inhaler",Latex,113,67,67,Patient advised to reduce sodium intake.
+P1001,Thomas,Thomas,F,1980-08-12,44,2024-05-20,Annual Checkup,F33.1,"Major depressive disorder, recurrent, moderate",Omeprazole 20 mg,None,117,70,66,Continue current medication regimen.
+P1002,James,Wilson,M,1997-01-04,28,2025-01-16,Follow‑up,M54.5,Low back pain,"Lisinopril 10 mg, Amoxicillin 500 mg, Metformin 500 mg",None,128,64,63,Continue current medication regimen.
+P1003,Michael,Thompson,M,1984-02-29,41,2024-10-30,ER Visit,I10,Essential (primary) hypertension,"Lisinopril 10 mg, Ibuprofen 400 mg",Latex,118,68,67,Continue current medication regimen.
+P1004,Karen,Smith,M,1977-09-06,47,2024-02-15,ER Visit,R51,Headache,Atorvastatin 20 mg,Peanuts,123,67,95,Vaccinations up to date.
+P1005,Elizabeth,Smith,M,1992-10-22,32,2024-06-16,ER Visit,M54.5,Low back pain,"Lisinopril 10 mg, Sertraline 50 mg, Metformin 500 mg",Penicillin,135,70,81,Patient advised to reduce sodium intake.
+P1006,Elizabeth,Jackson,F,1959-02-19,66,2024-11-22,Annual Checkup,K21.9,Gastro‑esophageal reflux disease without esophagitis,"Sertraline 50 mg, Amoxicillin 500 mg, Albuterol Inhaler",Peanuts,135,64,70,Follow‑up in 3 months.
+P1007,Sarah,Brown,F,1950-08-16,74,2024-07-26,Annual Checkup,R51,Headache,Metformin 500 mg,None,108,88,61,Referred to specialist.
+P1008,Robert,Davis,M,1988-10-31,36,2024-12-31,ER Visit,R51,Headache,"Albuterol Inhaler, Amoxicillin 500 mg, Sertraline 50 mg",Latex,122,66,80,Referred to specialist.
+P1009,Jessica,Miller,M,1994-09-18,30,2024-07-03,Office Visit,E11.9,Type 2 diabetes mellitus without complications,Ibuprofen 400 mg,Sulfa drugs,114,66,89,Referred to specialist.
