@@ -11,25 +11,30 @@ This project demonstrates common security vulnerabilities in a client-server app
 
 ## How to Run the Demonstration
 
-### Step 1: Run the Vulnerable Demonstration
+1. **Install Python3 and requirements.txt**
 
-1. **Create database**
+```bash
+sudo apt install python3 python3-pip
+pip install -r requirements.txt --break-system-packages
+```
+
+2. **Create database**
 
     Run `python create_db.py` to create `medical_records.db`
 
-2. **Run local llm**
+3. **Run local llm**
     Install `llama.cpp` and run a local llm, for example:
     
     ```bash
     ~/llama.cpp/build/bin/llama-server -m gemma-3-27b-it-Q4_0.gguf --host 0.0.0.0 --port 8000
     ```
-3.  **Start the vulnerable server**:
+4.  **Start the vulnerable server**:
     ```bash
     python server.py
     ```
     The server will start on `http://127.0.0.1:6278`.
 
-4.  **Run the client against the server**
+5.  **Run the client against the server**
     ```bash
     python client.py
     ```
